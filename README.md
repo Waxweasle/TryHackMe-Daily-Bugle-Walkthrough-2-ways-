@@ -1,1 +1,1 @@
-# TryHackMe-Daily-Bugle-Walkthrough-2-ways-
+# TryHackMe-Daily-Bugle-Walkthrough-2-ways
