@@ -17,7 +17,7 @@ Running a quick vlunrability scan against the site returns an interesting result
 Running the exploit against the page yields a few usernames, as well as a bcrypt hash.
 ![joom](https://user-images.githubusercontent.com/103790652/218285303-8f4b9622-a418-4c18-a0aa-91c69d3053f0.png)
 
-Feeding the hash to JohnTheRipper yeils the great password of spiderman123 after a wait.
+Feeding the hash to JohnTheRipper yeilds the great password of spiderman123 after a wait.
 
 Tried to log in via ssh using the obtained usernames + password but had no luck so returned to the webpage scan results.
 
