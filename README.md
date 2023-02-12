@@ -60,6 +60,46 @@ Root privesc in this path was done first by finding out what I could get away wi
 Checking GTFObins it was apparent that yum can spawn interactive root shell by loading a custom plugin when it doesn't drop sudo rights
 ![gtfobins](https://user-images.githubusercontent.com/103790652/218286023-b2ea3946-d28d-441c-8360-567673fb6f2a.png)
 
+Running/ loading the plugin was enough to get root privesc and allowed access to the root.txt flag.
+![jj-root](https://user-images.githubusercontent.com/103790652/218286071-37b3ea09-359c-450a-b7a8-47999aef412e.png)
+
+
+## CVE exploitation
+After obtaining root via the above method, I returned to the CVE out of curiousity. Supposedly the version of Polkit (policy manager) could be exploited to allow any user to run commands as root.
+I decided to check out polkit on the machine & found that polkit's SUID was set and the version was indeed vlunerable.
+
+![suid](https://user-images.githubusercontent.com/103790652/218286302-bee9aebb-0550-4198-82b2-748351be29d4.png)
+
+![version](https://user-images.githubusercontent.com/103790652/218286305-9dab0ee0-d0de-4d45-8828-810023104d77.png)
+
+After spending some time researching, I found an exploit that would work perfectly at https://packetstormsecurity.com/files/165739/PolicyKit-1-0.105-31-Privilege-Escalation.html. 
+
+I crafted the 3 necessary files on my local machine and downloaded them to the vulnerable machine via webserver.
+After compiling the code, the exploit was formed.
+
+![files](https://user-images.githubusercontent.com/103790652/218286421-ee1b6cb1-2d74-40b4-9dae-3a879f2efb83.png)
+
+I simply changed the file permissions to allow the exploit to run and let it work it's magic.
+
+![permissions](https://user-images.githubusercontent.com/103790652/218286464-fdca9dd2-c9e3-4982-9c84-13cc258768c8.png)
+
+Instant root! 
+
+![root](https://user-images.githubusercontent.com/103790652/218286475-d6f9094d-7684-49f1-95df-2c5bd6af83ee.png)
+
+
+Overall, I found this machine to be good fun, enjoyed looking into the exploit (given it's severity) and liked the fact there were multiple ways to exploit the target.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
