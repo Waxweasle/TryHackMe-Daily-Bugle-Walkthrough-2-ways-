@@ -88,7 +88,7 @@ Instant root!
 ![root](https://user-images.githubusercontent.com/103790652/218286475-d6f9094d-7684-49f1-95df-2c5bd6af83ee.png)
 
 
-Overall, I found this machine to be good fun, enjoyed looking into the exploit (given it's severity) and liked the fact there were multiple ways to exploit the target.
+Overall, I found this machine to be good fun, enjoyed looking into the exploit (given it's severity) and liked the fact there were multiple ways to exploit the target - I learned a lot.
 
 
 
