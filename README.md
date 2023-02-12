@@ -51,7 +51,9 @@ and direct root access via CVE-2021-4034:
 ## Password / account privesc
 
 Very simply, this just involved switching to the user jjameson (found in /home) with the password found by linpeas. 
+
 ![switchuser](https://user-images.githubusercontent.com/103790652/218285981-b737f694-059e-4d87-ad43-3f57345e66fe.png)
+
 Once the account was switched, the user.txt flag was readable from the Desktop.
 
 Root privesc in this path was done first by finding out what I could get away with (run):
